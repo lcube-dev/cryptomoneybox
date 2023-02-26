@@ -37,7 +37,7 @@ Above is a basic diagram of the parts of this project contained in each folder, 
 1. Web App (Static website) | cryptoMoneybox/web
 2. Web Server! | cryptoMoneybox/api
 3. Cadence Code | cryptoMoneybox/cadence
-   Cadence smart contracts, scripts & transactions for your viewing pleasure. This folder contains all of the blockchain logic for the marketplace application.
+   Cadence smart contracts, scripts & transactions for your viewing pleasure. This folder contains all of the blockchain logic for the fundraising application
    
 # What are CryptoMoneybox?
 The CryptoMoneybox project supports two types of fundraising campaigns:
