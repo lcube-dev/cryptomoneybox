@@ -117,7 +117,9 @@ export const UserNFTCollection = () => {
                                                                     <h6 className="m-0" style={{
                                                                         fontWeight: "100",
                                                                         fontSize: "14px"
-                                                                    }}>{item.description}</h6>
+                                                                    }}>
+                                                                        {item.description.length > 50 ? item.description.substr(0, 50) + "..." : item.description}
+                                                                    </h6>
                                                                 </div>
                                                             </div>
                                                             <div className="blockchain d-inline-block mr-1 mr-md-0">
@@ -134,25 +136,6 @@ export const UserNFTCollection = () => {
                                                 </div>
                                             );
                                         })}
-                                    </div>
-                                    <div className="row mt-4 mt-md-5">
-                                        <div className="col-12">
-                                            {
-                                                NFTs.length > 0 &&
-                                                <nav>
-                                                    <ul className='page-numbers'>
-                                                        <li><span aria-current="page"
-                                                                  className="page-numbers current">1</span></li>
-                                                        <li><Link className="page-numbers" href="#">2</Link></li>
-                                                        <li><span className="page-numbers dots">&hellip;</span></li>
-                                                        <li><Link className="page-numbers" href="#">4</Link></li>
-                                                        <li><Link className="next page-numbers" href="#"><i
-                                                            className="icon-arrow-right"></i></Link></li>
-                                                    </ul>
-                                                </nav>
-                                            }
-
-                                        </div>
                                     </div>
                                 </div>
                             </section>
@@ -223,7 +206,7 @@ export const UserNFTCollection = () => {
                                                                 <h6 className="m-0" style={{
                                                                     fontWeight: "100",
                                                                     fontSize: "14px"
-                                                                }}>{item.description}</h6>
+                                                                }}> {item.description.length > 50 ? item.description.substr(0, 50) + "..." : item.description}</h6>
                                                             </div>
                                                         </div>
                                                         <div className="blockchain d-inline-block mr-1 mr-md-0">
@@ -241,25 +224,7 @@ export const UserNFTCollection = () => {
                                         );
                                     })}
                                 </div>
-                                <div className="row mt-4 mt-md-5">
-                                    <div className="col-12">
-                                        {
-                                            NFTs.length > 0 &&
-                                            <nav>
-                                                <ul className='page-numbers'>
-                                                    <li><span aria-current="page"
-                                                              className="page-numbers current">1</span></li>
-                                                    <li><Link className="page-numbers" href="#">2</Link></li>
-                                                    <li><span className="page-numbers dots">&hellip;</span></li>
-                                                    <li><Link className="page-numbers" href="#">4</Link></li>
-                                                    <li><Link className="next page-numbers" href="#"><i
-                                                        className="icon-arrow-right"></i></Link></li>
-                                                </ul>
-                                            </nav>
-                                        }
 
-                                    </div>
-                                </div>
                             </div>
                         </section>
                     </>

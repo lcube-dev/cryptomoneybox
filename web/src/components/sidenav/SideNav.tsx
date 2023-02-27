@@ -16,7 +16,7 @@ export const SideNav = (props: BoxProps & { onChange?: () => void }) => {
       <SideNavItem
         isActive={router.pathname == "/app/collection/created"}
         href="/app/collection/created"
-        label="Created By Me"
+        label="Create NFT"
         onChange={props.onChange}
       />
         <SideNavItem
@@ -36,7 +36,7 @@ export const SideNav = (props: BoxProps & { onChange?: () => void }) => {
         <SideNavItem
             isActive={router.pathname == "/app/createCharity"}
             href="/app/createCharity"
-            label="Create Charity"
+            label="Create Charity Campaign"
             onChange={props.onChange}
         />
     </VStack>

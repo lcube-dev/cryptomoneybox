@@ -9,15 +9,15 @@ const initData = {
     icon_1: "icon text-effect icon-location-pin m-0",
     icon_2: "icon text-effect icon-call-out m-0",
     icon_3: "icon text-effect icon-envelope-open m-0",
-    title_1: "Limitless Cube",
+    title_1: "Chain Cube",
     title_2: "Call Us",
     title_3: "Reach Us",
     address: "Samsun Teknopark, Turkey",
     map_heading: "Get Google Map Link",
     map_link: "https://www.google.com/maps/place/Samsun+Teknopark/@41.361062,36.1776393,17z/data=!3m1!4b1!4m6!3m5!1s0x40887f005ed7eb6f:0xeac58a07a907878b!8m2!3d41.361058!4d36.179828!16s%2Fg%2F11gk_2rkrd",
-    name: "Yunus Emre ASLAN",
-    phone_1: "yemre55@gmail.com / +90 (542) 334 34 55",
-    mail_1: "info@limitlesscube.com",
+    name: "Chain Cube Dev Team ",
+    phone_1: " +90 (542) 334 34 55",
+    mail_1: "info@chaincube.io",
     mail_2: "support@webmail.com"
 }
 const ContactPage = () => {

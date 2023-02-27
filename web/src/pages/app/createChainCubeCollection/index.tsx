@@ -17,7 +17,7 @@ const CreateChainCubeCollectionPage = () => {
     const flowUser = useFlowUser()
     const isMobile = useBreakpointValue({base: true, md: false})
 
-    const [ipfsUrl, setIpfsUrl] = useState(null);
+    const [ipfsUrl, setIpfsUrl] = useState("ipfs/Qmd1PxWiv9Rwz2TpXhvUM4YmSQ2Xx9KMob6B5yhPTHTXLU");
     const [collectionName, setCollectionName] = useState(null);
 
     const {
@@ -95,9 +95,11 @@ const CreateChainCubeCollectionPage = () => {
                                                    placeholder="Collection Name"/>
                                             <small className="form-text mt-2">Enter the name of your collection name</small>
                                         </div>
-                                        <div className="form-group">
+                                        <div className="form-group" style={{display:"none"}}>
                                             <label htmlFor="short-description">IPFS Image Url</label>
                                             <input type="text" id="short-description"
+                                                   disabled
+                                                   defaultValue="ipfs/Qmd1PxWiv9Rwz2TpXhvUM4YmSQ2Xx9KMob6B5yhPTHTXLU"
                                                    onChange={(e) => setIpfsUrl(e.target.value)} style={{padding: "7px"}}
                                                    placeholder="IPFS Url"/>
                                             <small className="form-text mt-2">Enter the name of your ipfs image

@@ -93,10 +93,10 @@ const CreateChartyPage = () => {
             console.log("txId " + txId)
 
             await fcl.tx(txId).onceSealed().catch(err => console.log(err))
-            toast.success("Successfully Create Charity", {id: toastId})
+            toast.success("Successfully Create Charity Campaign", {id: toastId})
         } catch (err) {
             console.log(err)
-            toast.error("cannot create charity " + err, {id: toastId})
+            toast.error("cannot create charity campaign " + err, {id: toastId})
         }
     }
 
@@ -116,7 +116,7 @@ const CreateChartyPage = () => {
                                 lineHeight="1.2"
                                 fontSize={!isMobile ? "4.5rem" : "2rem"}
                             >
-                                Create Charity
+                                Create Charity Campaign
                             </Heading>
                         </div>
                     </div>
@@ -169,7 +169,7 @@ const CreateChartyPage = () => {
                                                    onChange={(e) => setDonatedAddr(e.target.value)}
                                                    style={{padding: "7px"}}
                                                    placeholder="Donate Address"/>
-                                            <small className="form-text mt-2">Enter the Donate Address for coming
+                                            <small className="form-text mt-2">Enter the Donate Address for transferring
                                                 money </small>
                                         </div>
                                         <span className="d-inline-block">{initData.notice}</span> <br/>

@@ -195,7 +195,7 @@ const CharityDetailsPage = () => {
                                                     <ul className="list-group list-group-flush mt-2">
                                                         <li className="list-group-item d-flex justify-content-between align-items-center">
                                                             <div
-                                                                style={{color: "white"}}>{parseFloat(nftDetails?.targetAmount).toFixed(1)}</div>
+                                                                style={{color: "white"}}>{parseFloat(nftDetails?.targetAmount).toFixed(1)} FLOW</div>
                                                         </li>
                                                     </ul>
                                                 </div>
