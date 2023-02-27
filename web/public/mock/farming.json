@@ -1,0 +1,52 @@
+{
+    "farmingData": [
+        {
+            "id": 1,
+            "img": "/img/thumb_3.png",
+            "img_1": "/img/thumb_6.png",
+            "title": "Participate IGO Stake",
+            "title_1": "Farming Stake",
+            "category": "Game",
+            "collapse_link": "#collapseOne",
+            "collapse_id": "collapseOne",
+            "content": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC making it over.",
+            "staked": "0 LP",
+            "earned": "0.00 Game",
+            "apy": "25%",
+            "price": "$9,524,07.19",
+            "value": "$24571,957.94",
+            "input_title_1": "Deposit",
+            "input_title_2": "Withdraw",
+            "input_btn_1": "Approve",
+            "input_btn_2": "Withdraw",
+            "reward_title": "Pending rewards",
+            "reward": "0.00 BUSD",
+            "reward_content": "Rewards are depleted, ask admins to fund it.",
+            "actionBtn": "Claim"
+        },
+        {
+            "id": 2,
+            "img": "/img/thumb_4.png",
+            "img_1": "/img/thumb_7.png",
+            "title": "Gaming Stake",
+            "title_1": "Gaming Stake",
+            "category": "Staking",
+            "collapse_link": "#collapseTwo",
+            "collapse_id": "collapseTwo",
+            "content": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC making it over.",
+            "staked": "0 LP",
+            "earned": "0.00 Game",
+            "apy": "14%",
+            "price": "$7,742,57.29",
+            "value": "$14517,257.72",
+            "input_title_1": "Deposit",
+            "input_title_2": "Withdraw",
+            "input_btn_1": "Approve",
+            "input_btn_2": "Withdraw",
+            "reward_title": "Pending rewards",
+            "reward": "0.00 BUSD",
+            "reward_content": "Rewards are depleted, ask admins to fund it.",
+            "actionBtn": "Claim"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "socialData": [
+        {
+            "id": 1,
+            "link": "twitter",
+            "icon": "fab fa-twitter"
+        },
+        {
+            "id": 2,
+            "link": "telegram",
+            "icon": "fab fa-telegram"
+        },
+        {
+            "id": 3,
+            "link": "globe",
+            "icon": "fas fa-globe"
+        },
+        {
+            "id": 4,
+            "link": "discord",
+            "icon": "fab fa-discord"
+        }
+    ],
+    "socialDataTwo": [
+        {
+            "id": 1,
+            "link": "https://www.facebook.com/",
+            "icon": "icon-social-facebook"
+        },
+        {
+            "id": 2,
+            "link": "https://twitter.com/",
+            "icon": "icon-social-twitter"
+        },
+        {
+            "id": 3,
+            "link": "https://www.linkedin.com/",
+            "icon": "icon-social-linkedin"
+        },
+        {
+            "id": 4,
+            "link": "https://www.reddit.com/",
+            "icon": "icon-social-reddit"
+        },
+        {
+            "id": 5,
+            "link": "https://discord.com/",
+            "icon": "icon-social-vkontakte"
+        },
+        {
+            "id": 6,
+            "link": "https://www.youtube.com/",
+            "icon": "icon-social-youtube"
+        }
+    ]
+}

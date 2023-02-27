@@ -1,0 +1,37 @@
+{
+    "sub_heading": "Wallet Connect",
+    "heading": "Connect your Wallet",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.",
+    "walletData": [
+        {
+            "id": 1,
+            "img": "/img/metamask.png",
+            "title": "MetaMask",
+            "content": "A browser extension with great flexibility. The web's most popular wallet"
+        },
+        {
+            "id": 2,
+            "img": "/img/authereum.png",
+            "title": "Authereum",
+            "content": "A user-friendly wallet that allows you to sign up with your phone number on any device"
+        },
+        {
+            "id": 3,
+            "img": "/img/walletconnect.png",
+            "title": "WalletConnect",
+            "content": "Pair with Trust, Argent, MetaMask & more. Works from any browser, without an extension"
+        },
+        {
+            "id": 4,
+            "img": "/img/dapper.png",
+            "title": "Dapper",
+            "content": "A security-focused cloud wallet with pin codes and multi-factor authentication"
+        },
+        {
+            "id": 5,
+            "img": "/img/kaikas.png",
+            "title": "Kaikas",
+            "content": "A simple-to-use wallet that works on both mobile and through a browser extension"
+        }
+    ]
+}

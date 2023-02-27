@@ -1,0 +1,146 @@
+{
+    "sub_heading": "Project",
+    "sub_heading_2": "Exclusive",
+    "heading": "Upcoming IGOs",
+    "heading_2": "Previous IGO",
+    "heading_3": "Ongoing IGOs",
+    "heading_4": "Multi-chain IGOs",
+    "btn": "View More",
+    "btn_2": "View All",
+    "btn_3": "View Leaderboard",
+    "btn_4": "View Tier System",
+    "btn_5": "View Tokenomics",
+    "load_btn": "Load More",
+    "projectData": [
+        {
+            "id": 1,
+            "img": "/img/thumb_1.png",
+            "blockchain": "/img/ethereum.png",
+            "title": "Metaverse 3D",
+            "reg_date": "2022-08-30",
+            "raise": "100k",
+            "val": "2.8M",
+            "allocation": "$0",
+            "progress": "25%",
+            "mecha": "0/100,069 MECHA",
+            "busd": "0 BUSD"
+        },
+        {
+            "id": 2,
+            "img": "/img/thumb_2.png",
+            "blockchain": "/img/binance.png",
+            "title": "Pixel Pix",
+            "reg_date": "2022-07-25",
+            "raise": "85k",
+            "val": "1.9M",
+            "allocation": "$0",
+            "progress": "8%",
+            "mecha": "0/94,752 MECHA",
+            "busd": "0 BUSD"
+        },
+        {
+            "id": 3,
+            "img": "/img/thumb_3.png",
+            "blockchain": "/img/ethereum-gold.png",
+            "title": "Cyber City",
+            "reg_date": "2022-07-18",
+            "raise": "69k",
+            "val": "3.2M",
+            "allocation": "$0",
+            "progress": "12%",
+            "mecha": "0/87,074 MECHA",
+            "busd": "0 BUSD"
+        },
+        {
+            "id": 4,
+            "img": "/img/thumb_4.png",
+            "blockchain": "/img/solana.png",
+            "title": "Real Hunter",
+            "reg_date": "2022-07-28",
+            "raise": "90k",
+            "val": "2.6M",
+            "allocation": "$0",
+            "progress": "27%",
+            "mecha": "0/532,399 MECHA",
+            "busd": "0 BUSD"
+        },
+        {
+            "id": 5,
+            "img": "/img/thumb_5.png",
+            "blockchain": "/img/ethereum-gold.png",
+            "title": "BitHotel",
+            "reg_date": "2022-08-30",
+            "raise": "120k",
+            "val": "4.8M",
+            "allocation": "$0",
+            "progress": "42%",
+            "mecha": "0/298,064 MECHA",
+            "busd": "0 BUSD"
+        },
+        {
+            "id": 6,
+            "img": "/img/thumb_6.png",
+            "blockchain": "/img/ethereum.png",
+            "title": "CryptoPunk",
+            "reg_date": "2022-07-24",
+            "raise": "89k",
+            "val": "4.6M",
+            "allocation": "$0",
+            "progress": "36%",
+            "mecha": "0/396,074 MECHA",
+            "busd": "0 BUSD"
+        }
+    ],
+    "igoData": [
+        {
+            "id": 1,
+            "img": "/img/thumb_6.png",
+            "blockchain": "/img/ethereum.png",
+            "title": "Ancient Kingdom",
+            "price": "Price (GAC) = 0.89 BUSD",
+            "publish": "5 hours ago",
+            "process": "x86",
+            "amount": "$1.06298"
+        },
+        {
+            "id": 2,
+            "img": "/img/thumb_7.png",
+            "blockchain": "/img/binance.png",
+            "title": "Galaxy War",
+            "price": "Price (GAC) = 0.72 BUSD",
+            "publish": "7 hours ago",
+            "process": "x97",
+            "amount": "$0.9268"
+        },
+        {
+            "id": 3,
+            "img": "/img/thumb_8.png",
+            "blockchain": "/img/solana.png",
+            "title": "Crypto Art",
+            "price": "Price (GAC) = 0.68 BUSD",
+            "publish": "9 hours ago",
+            "process": "x64",
+            "amount": "$2.87641"
+        },
+        {
+            "id": 4,
+            "img": "/img/thumb_9.png",
+            "blockchain": "/img/ethereum-gold.png",
+            "title": "Marvel Design",
+            "price": "Price (GAC) = 0.49 BUSD",
+            "publish": "6 hours ago",
+            "process": "x75",
+            "amount": "$1.5967"
+        },
+        {
+            "id": 5,
+            "img": "/img/thumb_10.png",
+            "blockchain": "/img/ethereum.png",
+            "title": "Partial Monk",
+            "price": "Price (GAC) = 0.78 BUSD",
+            "publish": "9 hours ago",
+            "process": "x94",
+            "amount": "$0.43615"
+        }
+    ]
+}

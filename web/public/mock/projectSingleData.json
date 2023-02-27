@@ -1,0 +1,99 @@
+{
+    "initData": {
+        "img": "/img/thumb_2.png",
+        "blockchain": "/img/ethereum.png",
+        "title": "Metaverse",
+        "reg_date": "2022-11-30",
+        "raise": "100k",
+        "val": "2.8M",
+        "allocation": "$0",
+        "progress": "25%",
+        "mecha": "0/100,069 MECHA",
+        "busd": "0 BUSD",
+        "actionBtn": "Claim Token",
+        "video_img": "/img/thumb_6.png",
+        "video_icon": "fa-solid fa-play",
+        "video_link": "https://www.youtube.com/watch?v=fzBTvDraO5U"
+    },
+    "summaryData": {
+        "title": "Project Summary",
+        "content_1": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+        "content_2": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth."
+    },
+    "overviewData": {
+        "title": "Project Overview",
+        "list_heading": "Lorem ipsum dolor sit",
+        "content": "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar."
+    },
+    "tokenmetricsData": {
+        "title": "Token Metrics",
+        "content": "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar."
+    },
+    "roadmapData": {
+        "title": "Roadmap",
+        "content_1": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+        "content_2": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth."
+    },
+    "socialData": [
+        {
+            "id": "1",
+            "link": "twitter",
+            "icon": "fab fa-twitter"
+        },
+        {
+            "id": "2",
+            "link": "telegram",
+            "icon": "fab fa-telegram"
+        },
+        {
+            "id": "3",
+            "link": "globe",
+            "icon": "fas fa-globe"
+        },
+        {
+            "id": "4",
+            "link": "discord",
+            "icon": "fab fa-discord"
+        }
+    ],
+    "overviewList": [
+        {
+            "id": "1",
+            "content": "Far far away"
+        },
+        {
+            "id": "2",
+            "content": "Behind the word mountains"
+        },
+        {
+            "id": "3",
+            "content": "Far from the countries Vokalia and Consonantia"
+        },
+        {
+            "id": "4",
+            "content": "There live the blind texts"
+        }
+    ],
+    "tokenList": [
+        {
+            "id": "1",
+            "title": "Fundraised:",
+            "content": "$500,000"
+        },
+        {
+            "id": "2",
+            "title": "Platfrom Raise:",
+            "content": "$120,000 + $5,000"
+        },
+        {
+            "id": "3",
+            "title": "Price:",
+            "content": "$0.05"
+        },
+        {
+            "id": "4",
+            "title": "Lock-up:",
+            "content": "25% unlocked on TGE, 4 months cliff, then 5% on a monthly basis"
+        }
+    ]
+}

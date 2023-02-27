@@ -1,0 +1,127 @@
+{
+    "projectData": [
+        {
+            "id": "1",
+            "img": "/img/thumb_1.png",
+            "group": [
+                "ongoing",
+                "ended"
+            ],
+            "blockchain": "/img/ethereum.png",
+            "title": "Metaverse 3D",
+            "reg_date": "2022-12-30",
+            "raise": "100k",
+            "val": "2.8M",
+            "allocation": "$0",
+            "progress": "25%",
+            "mecha": "0/100,069 MECHA",
+            "busd": "0 BUSD"
+        },
+        {
+            "id": "2",
+            "img": "/img/thumb_2.png",
+            "group": [
+                "upcoming",
+                "ended"
+            ],
+            "blockchain": "/img/binance.png",
+            "title": "Pixel Pix",
+            "reg_date": "2022-11-25",
+            "raise": "85k",
+            "val": "1.9M",
+            "allocation": "$0",
+            "progress": "8%",
+            "mecha": "0/94,752 MECHA",
+            "busd": "0 BUSD"
+        },
+        {
+            "id": "3",
+            "img": "/img/thumb_3.png",
+            "group": [
+                "ongoing"
+            ],
+            "blockchain": "/img/ethereum-gold.png",
+            "title": "Cyber City",
+            "reg_date": "2022-11-18",
+            "raise": "69k",
+            "val": "3.2M",
+            "allocation": "$0",
+            "progress": "12%",
+            "mecha": "0/87,074 MECHA",
+            "busd": "0 BUSD"
+        },
+        {
+            "id": "4",
+            "img": "/img/thumb_4.png",
+            "group": [
+                "ended",
+                "ongoing"
+            ],
+            "blockchain": "/img/solana.png",
+            "title": "Real Hunter",
+            "reg_date": "2022-12-28",
+            "raise": "90k",
+            "val": "2.6M",
+            "allocation": "$0",
+            "progress": "27%",
+            "mecha": "0/532,399 MECHA",
+            "busd": "0 BUSD"
+        },
+        {
+            "id": "5",
+            "img": "/img/thumb_5.png",
+            "group": [
+                "ended",
+                "upcoming"
+            ],
+            "blockchain": "/img/ethereum-gold.png",
+            "title": "BitHotel",
+            "reg_date": "2022-10-30",
+            "raise": "120k",
+            "val": "4.8M",
+            "allocation": "$0",
+            "progress": "42%",
+            "mecha": "0/298,064 MECHA",
+            "busd": "0 BUSD"
+        },
+        {
+            "id": "6",
+            "img": "/img/thumb_6.png",
+            "group": [
+                "upcoming",
+                "ended"
+            ],
+            "blockchain": "/img/ethereum.png",
+            "title": "CryptoPunk",
+            "reg_date": "2022-11-30",
+            "raise": "89k",
+            "val": "4.6M",
+            "allocation": "$0",
+            "progress": "64%",
+            "mecha": "0/396,074 MECHA",
+            "busd": "0 BUSD"
+        }
+    ],
+    "socialData": [
+        {
+            "id": "1",
+            "link": "twitter",
+            "icon": "fab fa-twitter"
+        },
+        {
+            "id": "2",
+            "link": "telegram",
+            "icon": "fab fa-telegram"
+        },
+        {
+            "id": "3",
+            "link": "globe",
+            "icon": "fas fa-globe"
+        },
+        {
+            "id": "4",
+            "link": "discord",
+            "icon": "fab fa-discord"
+        }
+    ]
+}

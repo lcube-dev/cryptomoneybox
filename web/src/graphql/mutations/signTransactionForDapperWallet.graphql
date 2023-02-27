@@ -1,0 +1,3 @@
+mutation signTransactionForDapperWallet($transaction: String) {
+  signTransactionForDapperWallet(transaction: $transaction)
+}

@@ -1,0 +1,28 @@
+{
+    "sub_heading": "Project",
+    "heading": "Multi-chain IGOs",
+    "excerpt": "Join IGOs on multiple blockchains in a single click. Support game by providing LP or just stake the game and get rewards.",
+    "contentData": [
+        {
+            "id": 1,
+            "icon": "fa-brands fa-discord",
+            "featured": "",
+            "title": "Submit KYC",
+            "content": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested."
+        },
+        {
+            "id": 2,
+            "icon": "fa-brands fa-hotjar",
+            "featured": "featured",
+            "title": "Verify Wallet",
+            "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+        },
+        {
+            "id": 3,
+            "icon": "fa-solid fa-rocket",
+            "featured": "",
+            "title": "Start Staking",
+            "content": "It is a long established fact that a reader will be distracted by the readable content of a page."
+        }
+    ]
+}

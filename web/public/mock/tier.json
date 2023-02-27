@@ -1,0 +1,70 @@
+{
+    "tierData": [
+        {
+            "id": 1,
+            "title": "Tier 1",
+            "category": "Normal",
+            "amount": "500 BUSD",
+            "size": "[2x]",
+            "type": "Lottery",
+            "locked": "60 Days",
+            "weight": "6.5",
+            "tierType": "T1"
+        },
+        {
+            "id": 2,
+            "title": "Tier 2",
+            "category": "Silver",
+            "amount": "750 BUSD",
+            "size": "[4x]",
+            "type": "Lottery",
+            "locked": "90 Days",
+            "weight": "7.5",
+            "tierType": "T2"
+        },
+        {
+            "id": 3,
+            "title": "Tier 3",
+            "category": "Bronze",
+            "amount": "950 BUSD",
+            "size": "[6x]",
+            "type": "Guaranteed for registered",
+            "locked": "120 Days",
+            "weight": "9.5",
+            "tierType": "T3"
+        },
+        {
+            "id": 4,
+            "title": "Tier 4",
+            "category": "Gold",
+            "amount": "1200 BUSD",
+            "size": "[10x]",
+            "type": "Guaranteed for registered",
+            "locked": "185 Days",
+            "weight": "12",
+            "tierType": "T4"
+        },
+        {
+            "id": 5,
+            "title": "Tier 5",
+            "category": "Platinum",
+            "amount": "1500 BUSD",
+            "size": "[14x]",
+            "type": "Guaranteed for registered",
+            "locked": "90 Days",
+            "weight": "18.5",
+            "tierType": "T5"
+        },
+        {
+            "id": 6,
+            "title": "Tier 6",
+            "category": "Diamond",
+            "amount": "2k BUSD",
+            "size": "[24x]",
+            "type": "Guaranteed for registered",
+            "locked": "365 Days",
+            "weight": "20",
+            "tierType": "T6"
+        }
+    ]
+}

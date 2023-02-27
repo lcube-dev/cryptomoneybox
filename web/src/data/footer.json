@@ -1,0 +1,23 @@
+{
+  "img": "/img/logo.png",
+  "copyright": "©2023 Crypto Moneybox, All Rights Reserved By",
+  "owner": "Chain Cube",
+  "ownerLink": "/",
+  "socialData": [
+      {
+          "id": 1,
+          "link": "https://twitter.com/socialchaincube",
+          "icon": "icon-social-twitter"
+      },
+      {
+          "id": 2,
+          "link": "https://discord.gg/pxEQq5xQph",
+          "icon": "fab fa-discord"
+      },
+      {
+          "id": 3,
+          "link": "https://www.instagram.com/chain.cube/",
+          "icon": "icon-social-instagram"
+      }
+  ]
+}

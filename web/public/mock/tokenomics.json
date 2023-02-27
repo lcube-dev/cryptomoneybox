@@ -1,0 +1,73 @@
+{
+    "heading_1": "Category",
+    "heading_2": "Allocation",
+    "heading_3": "Raise",
+    "heading_4": "Locked",
+    "heading_5": "Vesting (Month)",
+    "tokenomicsData": [
+        {
+            "id": 1,
+            "category": "Staking",
+            "allocation": "14%",
+            "raise": "0x854e112....2574rf2",
+            "locked": "06 Month",
+            "vesting": "12"
+        },
+        {
+            "id": 2,
+            "category": "Marketing",
+            "allocation": "10%",
+            "raise": "0x452e125....845004",
+            "locked": "12 Month",
+            "vesting": "16"
+        },
+        {
+            "id": 3,
+            "category": "Private",
+            "allocation": "20%",
+            "raise": "0x452e547....2x4125",
+            "locked": "--",
+            "vesting": "09"
+        },
+        {
+            "id": 4,
+            "category": "Farming",
+            "allocation": "18%",
+            "raise": "0x942d542....12f000",
+            "locked": "--",
+            "vesting": "10"
+        },
+        {
+            "id": 5,
+            "category": "Advisor",
+            "allocation": "45%",
+            "raise": "0x842w14....452e99",
+            "locked": "04 Month",
+            "vesting": "18"
+        },
+        {
+            "id": 6,
+            "category": "Exchange",
+            "allocation": "24%",
+            "raise": "0x547o475....475v52",
+            "locked": "12 Month",
+            "vesting": "24"
+        },
+        {
+            "id": 7,
+            "category": "Ranking",
+            "allocation": "25%",
+            "raise": "0x472e0214....4x4521",
+            "locked": "03 Month",
+            "vesting": "10"
+        },
+        {
+            "id": 8,
+            "category": "System",
+            "allocation": "18%",
+            "raise": "0x754e745....xpd457",
+            "locked": "06 Month",
+            "vesting": "14"
+        }
+    ]
+}

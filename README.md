@@ -34,14 +34,14 @@ npm run dev
 
 Above is a basic diagram of the parts of this project contained in each folder, and how each part interacts with the others.
 
-1. Web App (Static website) | cryptoMoneybox/web
-2. Web Server! | cryptoMoneybox/api
-3. Cadence Code | cryptoMoneybox/cadence
-   Cadence smart contracts, scripts & transactions for your viewing pleasure. This folder contains all of the blockchain logic for the fundraising application
-   
-# What are CryptoMoneybox?
+1. Web App (Static website) | cryptoMoneybox/web/app
+2. Web Server! | cryptoMoneybox/web/src/pages/api
+3. Cadence Code | cryptoMoneybox/web/src/cadence
+- Cadence smart contracts, scripts & transactions for your viewing pleasure. This folder contains all of the blockchain logic for the fundraising application
+
+# What is CryptoMoneybox?
 The CryptoMoneybox project supports two types of fundraising campaigns:
-1. Fundraisin Campaign
+1. Fundraising Campaign
     - Organizing a fundraising campaign with a CharityEvent resource
 3. Aid Organization
     - Aid organizations model is a a platform that allows individuals and organizations to start a campaign quickly in case of any natural disaster.
@@ -49,10 +49,7 @@ The CryptoMoneybox project supports two types of fundraising campaigns:
 # ❓ More Questions?
   - Chat with the team on the ChainCube [Discord server](https://discord.gg/pxEQq5xQph)
 
-# Troubleshooting
-**Rebuild dependencies**
-  - If you change `node` versions on your system, you'll need to cd into the `web` and `api` directory and run `npm rebuild` to rebuild you dependencies for the new version.
-
+# Troubleshooting 
  **Finding the logs**
   - You can see what processes have been started, and if they are online using `pm2 list`
   - You can tail logs for individual processes using `pm2 logs [process name]`. eg., `pm2 logs api` or `pm2 logs web`

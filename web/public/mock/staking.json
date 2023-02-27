@@ -1,0 +1,104 @@
+{
+    "heading": "Participate IGO Stake",
+    "balance": "256.50 BUSD",
+    "content": "Once staked, you need to register for every IDO, so we can calculate the guaranteed allocation. Once registered, we lock your tokens, but you still can participate in other IDOs.",
+    "note": "*APY is dynamic.",
+    "input_btn_1": "Approve",
+    "input_btn_2": "Withdraw",
+    "tabData": [
+        {
+            "id": 1,
+            "tabID": "tab-one-tab",
+            "tabClass": "tab-link active",
+            "tabLink": "#tab-one",
+            "title": "7 Days"
+        },
+        {
+            "id": 2,
+            "tabID": "tab-two-tab",
+            "tabClass": "tab-link",
+            "tabLink": "#tab-two",
+            "title": "14 Days"
+        },
+        {
+            "id": 3,
+            "tabID": "tab-three-tab",
+            "tabClass": "tab-link",
+            "tabLink": "#tab-three",
+            "title": "30 Days"
+        },
+        {
+            "id": 4,
+            "tabID": "tab-four-tab",
+            "tabClass": "tab-link",
+            "tabLink": "#tab-four",
+            "title": "60 Days"
+        }
+    ],
+    "tabContent": [
+        {
+            "id": 1,
+            "tabID": "tab-one",
+            "tabClass": "tab-pane fade show active",
+            "tabLink": "tab-one",
+            "period": "7 Days",
+            "lock": "Yes",
+            "fee": "30%",
+            "status": "Unlocked",
+            "apy": "0%"
+        },
+        {
+            "id": 2,
+            "tabID": "tab-two",
+            "tabClass": "tab-pane fade",
+            "tabLink": "tab-two",
+            "period": "14 Days",
+            "lock": "Yes",
+            "fee": "30%",
+            "status": "Unlocked",
+            "apy": "12%"
+        },
+        {
+            "id": 3,
+            "tabID": "tab-three",
+            "tabClass": "tab-pane fade",
+            "tabLink": "tab-three",
+            "period": "30 Days",
+            "lock": "Yes",
+            "fee": "30%",
+            "status": "Unlocked",
+            "apy": "25%"
+        },
+        {
+            "id": 4,
+            "tabID": "tab-four",
+            "tabClass": "tab-pane fade",
+            "tabLink": "tab-four",
+            "period": "60 Days",
+            "lock": "No",
+            "fee": "30%",
+            "status": "Unlocked",
+            "apy": "35%"
+        }
+    ],
+    "features": [
+        {
+            "id": 1,
+            "title": "$9,574,20.84",
+            "className": "card no-hover staking-card",
+            "content": "Total Value Locked"
+        },
+        {
+            "id": 2,
+            "title": "97.23%",
+            "className": "card no-hover staking-card my-4",
+            "content": "APY"
+        },
+        {
+            "id": 3,
+            "title": "6997",
+            "className": "card no-hover staking-card",
+            "content": "Number of Stakers"
+        }
+    ]
+}
