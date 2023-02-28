@@ -56,6 +56,7 @@ The CryptoMoneybox project supports two types of fundraising campaigns:
 ## Troubleshooting 
 
 **Finding the logs**
+   - You must install pm2 with `npm install pm2 -g`
    - You can see what processes have been started, and if they are online using `pm2 list`
    - You can tail logs for individual processes using `pm2 logs [process name]`. eg., `pm2 logs api` or `pm2 logs web`
    - You can tail all logs in the same terminal using `pm2 logs`
