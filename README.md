@@ -44,9 +44,9 @@ git clone --depth=1 https://github.com/lcube-dev/cryptomoneybox.git
 
 Above is a basic diagram of the parts of this project contained in each folder, and how each part interacts with the others.
 
-1. Web App (Static website) | cryptoMoneybox/web/app
-2. Web Server! | cryptoMoneybox/web/src/pages/api
-3. Cadence Code | cryptoMoneybox/web/src/cadence
+1. Web App (Static website) | cryptomoneybox/web/app
+2. Web Server               |  cryptomoneybox/web/src/pages/api
+3. Cadence Code             | cryptomoneybox/web/src/cadence
 - Cadence smart contracts, scripts & transactions for your viewing pleasure. This folder contains all of the blockchain logic for the fundraising application
 
 ## What is CryptoMoneybox?
