@@ -21,6 +21,10 @@ git clone --depth=1 https://github.com/lcube-dev/cryptomoneybox.git
 **3. Install packages**
 - Run `npm install` in `/cryptomoneybox/web` folder.
 
+ - Note: If you are using a Macintosh change dev value in package.json like below:
+ 
+    `"dev": "next dev --port 3000 yarn generate--watch"`
+
 **Local development
 - Run this command to start CryptoMoneybox with the Flow local development suite:
 
