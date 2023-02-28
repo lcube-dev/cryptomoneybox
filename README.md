@@ -58,3 +58,6 @@ The CryptoMoneybox project supports two types of fundraising campaigns:
 **Unblock ports**
   * CryptoMoneybox uses the following ports. Make sure they are not in use by another process
   * 3000: CryptoMoneybox web app
+** Contracts
+  * Charity.cdc :   `Testnet` 
+  * ChainCubeAid.cdc :    `Testnet`
