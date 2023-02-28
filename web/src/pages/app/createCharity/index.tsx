@@ -9,7 +9,7 @@ import {useFlowUser} from "../../../hooks/userFlowUser";
 import DatePicker from "react-datepicker"
 
 const initData = {
-    btn: "Create Collection",
+    btn: "Create Charity Campaign",
     notice: "We will create collection in the Flow Blockchain"
 }
 
