@@ -19,7 +19,7 @@ CryptoMoneybox is a fundraising platform  demo application for social responsibi
 git clone --depth=1 https://github.com/lcube-dev/cryptomoneybox.git
 ```
 **3. Install packages**
-- Run `npm install --save-dev cross-env` in \cryptomoneybox\web folder.
+- Run `npm install` in `/cryptomoneybox/web` folder.
 
 **Local development
 - Run this command to start CryptoMoneybox with the Flow local development suite:
