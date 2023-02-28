@@ -1,4 +1,4 @@
- # ![WhatsApp Image 2023-02-26 at 23 33 32](https://user-images.githubusercontent.com/126346134/221435741-22de6e5c-932b-4356-8c06-6aa901bdce34.jpg)  CryptoMoneybox
+ # <img src="https://user-images.githubusercontent.com/35562979/221948291-dccc65cb-7117-491e-95bd-8271dcda7bde.png" width="75" height="75">  CryptoMoneybox
 
 👋 Welcome! This demo app is designed for fundraising on Flow.
 
@@ -19,14 +19,20 @@ CryptoMoneybox is a fundraising platform  demo application for social responsibi
 git clone --depth=1 https://github.com/lcube-dev/cryptomoneybox.git
 ```
 **3. Install packages**
-- Run `npm install --save-dev cross-env` in \cryptomoneybox\web folder.
+- Run `npm install` in `/cryptomoneybox/web` folder.
 
-**Local development
-- Run this command to start CryptoMoneybox with the Flow local development suite:
+ - Note: If you are using a Macintosh change dev value in package.json like below:
+ 
+    `"dev": "next dev --port 3000 yarn generate--watch"`
 
-```javascript 
-npm run dev
-```
+
+**Local development**
+
+ - Run this command to start CryptoMoneybox with the Flow local development suite:
+
+     ```javascript 
+     npm run dev
+     ```
 
 ## Project Overview
 
@@ -38,9 +44,9 @@ npm run dev
 
 Above is a basic diagram of the parts of this project contained in each folder, and how each part interacts with the others.
 
-1. Web App (Static website) | cryptoMoneybox/web/app
-2. Web Server! | cryptoMoneybox/web/src/pages/api
-3. Cadence Code | cryptoMoneybox/web/src/cadence
+1. Web App (Static website) | cryptomoneybox/web/app
+2. Web Server               |  cryptomoneybox/web/src/pages/api
+3. Cadence Code             | cryptomoneybox/web/src/cadence
 - Cadence smart contracts, scripts & transactions for your viewing pleasure. This folder contains all of the blockchain logic for the fundraising application
 
 ## What is CryptoMoneybox?
@@ -56,6 +62,7 @@ The CryptoMoneybox project supports two types of fundraising campaigns:
 ## Troubleshooting 
 
 **Finding the logs**
+   - You must install pm2 with `npm install pm2 -g`
    - You can see what processes have been started, and if they are online using `pm2 list`
    - You can tail logs for individual processes using `pm2 logs [process name]`. eg., `pm2 logs api` or `pm2 logs web`
    - You can tail all logs in the same terminal using `pm2 logs`
