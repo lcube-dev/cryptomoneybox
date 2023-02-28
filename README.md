@@ -45,9 +45,16 @@ git clone --depth=1 https://github.com/lcube-dev/cryptomoneybox.git
 Above is a basic diagram of the parts of this project contained in each folder, and how each part interacts with the others.
 
 1. Web App (Static website) | cryptomoneybox/web/app
+
+   - This is a web application built with Nextjs that can connects directly to the Flow blockchain using `@onflow/fcl` and `Niftory API`. No servers required. `@onflow/fcl` and `Niftory API` handles authentication and authorization of Flow accounts, signing transactions, and querying data using using Cadence scripts.
+  
 2. Web Server               |  cryptomoneybox/web/src/pages/api
+    
+    - Cryptomoneybox use [Niftory API](https://github.com/Niftory) for backend web server.
+    
 3. Cadence Code             | cryptomoneybox/web/src/cadence
-- Cadence smart contracts, scripts & transactions for your viewing pleasure. This folder contains all of the blockchain logic for the fundraising application
+
+   - Cadence smart contracts, scripts & transactions for your viewing pleasure. This folder contains all of the blockchain logic for the fundraising application
 
 ## What is CryptoMoneybox?
 The CryptoMoneybox project supports two types of fundraising campaigns:
@@ -61,18 +68,12 @@ The CryptoMoneybox project supports two types of fundraising campaigns:
 
 ## Troubleshooting 
 
-**Finding the logs**
-   - You must install pm2 with `npm install pm2 -g`
-   - You can see what processes have been started, and if they are online using `pm2 list`
-   - You can tail logs for individual processes using `pm2 logs [process name]`. eg., `pm2 logs api` or `pm2 logs web`
-   - You can tail all logs in the same terminal using `pm2 logs`
-
 **Unblock ports**
    * CryptoMoneybox uses the following ports. Make sure they are not in use by another process
    * 3000: CryptoMoneybox web app
   
 **Contracts Addresses**
-   * Charity.cdc :   `Testnet` 
-   * ChainCubeAid.cdc :    `Testnet`
+   * Charity.cdc : [0xd88639d8cf8291b9](https://flowscan.org/account/0xd88639d8cf8291b9)  `Testnet` 
+   * ChainCubeAid.cdc : [0x0d5e5c6c8bd04037](https://flowscan.org/account/0x0d5e5c6c8bd04037)   `Testnet`
 
 -------------
