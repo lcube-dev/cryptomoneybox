@@ -25,12 +25,14 @@ git clone --depth=1 https://github.com/lcube-dev/cryptomoneybox.git
  
     `"dev": "next dev --port 3000 yarn generate--watch"`
 
-**Local development
-- Run this command to start CryptoMoneybox with the Flow local development suite:
 
-```javascript 
-npm run dev
-```
+**Local development**
+
+ - Run this command to start CryptoMoneybox with the Flow local development suite:
+
+     ```javascript 
+     npm run dev
+     ```
 
 ## Project Overview
 
