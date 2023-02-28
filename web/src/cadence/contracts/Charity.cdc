@@ -1,11 +1,27 @@
 import FungibleToken from 0x9a0766d93b6608b7
 
 access(all) contract Charity {
+
+    pub event CharityEventCreated(creatorAddr: Address, id: UInt64)
+    pub event CharityEventFinalized(id: UInt64)
+    pub event CharityEventDonated(id: UInt64, donator: Address, amount: UFix64)
+
     access(all) var creators: [Address]
     access(all) var totalEventCount: UInt64
-    access(all) let CharityEventCollectionPublicPath: PublicPath 
+    access(all) let CharityEventCollectionPublicPath: PublicPath
     access(all) let CharityEventCollectionPrivatePath: PrivatePath
     access(all) let CharityEventCollectionStoragePath: StoragePath
+
+    pub struct DonateBox {
+        pub let addr: Address
+        pub let amount: UFix64
+
+        init(addr: Address, amount: UFix64) {
+            self.addr = addr
+            self.amount = amount
+        }
+
+    }
 
     access(all) struct CharityDetails{
         pub(set) var id: UInt64
@@ -50,6 +66,7 @@ access(all) contract Charity {
         access (all) let id: UInt64
         access (all) let details: CharityDetails
         access (all) let targetVaultRef: Capability<&{FungibleToken.Receiver}>
+        pub let donators: [DonateBox]
         //access (all) let prizeNFT: @NonFungibleToken.NFT // this nft will be sent to maxDonator when the is event finalized
 
 
@@ -88,16 +105,19 @@ access(all) contract Charity {
             let sentVault: @FungibleToken.Vault <- senderVaultRef.withdraw(amount: amount)
             recRef.deposit(from: <- sentVault)
 
+            emit CharityEventDonated(id: self.details.id, donator: donator, amount: amount)
+
+
             self.details.donationCount = self.details.donationCount + 1
             self.details.totalDonationAmount = self.details.totalDonationAmount + amount
-            
+            self.donators.append(DonateBox(addr: donator, amount: amount))
             if amount > self.details.maxDonationAmount {
                 self.details.maxDonationAmount = amount
                 self.details.maxDonatorAddrs = donator.toString()
             }
-            
+
         }
-        
+
 
 
         init(details: CharityDetails,
@@ -106,28 +126,31 @@ access(all) contract Charity {
             Charity.totalEventCount = Charity.totalEventCount + 1
             self.details = details
             self.targetVaultRef = targetVaultRef
+            self.donators = []
         }
-        
+
         destroy () {
         }
-        
+
     }
 
     pub resource interface CharityEventCollectionPublic {
-        pub fun getCharityEventsDetails() : {UInt64 : CharityDetails} 
+        pub fun getCharityEventsDetails() : {UInt64 : CharityDetails}
         pub fun getCharityEventDetails(id: UInt64) : CharityDetails
         pub fun donate(id: UInt64, amount: UFix64, senderVaultRef: &FungibleToken.Vault)
+        pub fun getDonators(id: UInt64) : [DonateBox]
     }
 
     pub resource interface CharityEventCollectionPrivate {
-        pub fun createCharityEvent(name: String, 
-                                    desc: String, 
-                                    eDate: UFix64, 
-                                    targetAmount: UFix64, 
+        pub fun createCharityEvent(name: String,
+                                    desc: String,
+                                    eDate: UFix64,
+                                    targetAmount: UFix64,
                                     donatedAddr: Address,
                                     creatorAddr: Address,
                                     targetVaultRef: Capability<&{FungibleToken.Receiver}>,
                                     nftMetadata: {String:String})
+        pub fun finalizeEvent(id: UInt64)
     }
 
 
@@ -143,24 +166,28 @@ access(all) contract Charity {
             }
             return details
         }
-        
+
         pub fun getCharityEventDetails(id: UInt64) : CharityDetails {
              return self.charityEvents[id]?.getDetails()!
+        }
+
+        pub fun getDonators(id: UInt64) : [DonateBox] {
+            return self.charityEvents[id]?.donators!
         }
 
         pub fun donate(id: UInt64, amount: UFix64, senderVaultRef: &FungibleToken.Vault) {
             self.charityEvents[id]?.donate(amount: amount, senderVaultRef: senderVaultRef)
         }
 
-        pub fun createCharityEvent(name: String, 
-                                desc: String, 
-                                eDate: UFix64, 
-                                targetAmount: UFix64, 
+        pub fun createCharityEvent(name: String,
+                                desc: String,
+                                eDate: UFix64,
+                                targetAmount: UFix64,
                                 donatedAddr: Address,
                                 creatorAddr: Address,
                                 targetVaultRef: Capability<&{FungibleToken.Receiver}>,
                                 nftMetadata: {String:String}){
-        
+
             let details: CharityDetails = CharityDetails(name: name,
                                                         desc: desc,
                                                         eDate: eDate,
@@ -173,6 +200,7 @@ access(all) contract Charity {
                                             targetVaultRef: targetVaultRef)
 
             charityEvent.details.id = charityEvent.id
+            emit CharityEventCreated(creatorAddr: creatorAddr, id: charityEvent.id)
             self.charityEvents[charityEvent.id] <-! charityEvent
             if !Charity.creators.contains(creatorAddr) {
                 Charity.creators.append(creatorAddr)
@@ -183,6 +211,7 @@ access(all) contract Charity {
             //send prizeNFT to maxDonator
             var details: CharityDetails = self.charityEvents[id]?.details!
             details.eDate = getCurrentBlock().timestamp
+            emit CharityEventFinalized(id: id)
         }
 
         

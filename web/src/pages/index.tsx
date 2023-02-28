@@ -9,7 +9,7 @@ const HomePage = () => {
     const initData = {
         sub_heading: "Crypto Moneybox",
         heading: "Contribute to Donation Campaigns",
-        content: "Buy NFT and Donate, The Highest Donor The Owner of the NFT"
+        content: "Aid organizations and Donate, The Highest Donor The Owner of the NFT"
     }
 
     return (
@@ -49,8 +49,8 @@ const HomePage = () => {
                                 <div className="button-group">
                                     <Link className="btn btn-bordered active smooth-anchor" href="/app/charities"><i
                                         className="icon-rocket mr-2"/>Donate Campaigns</Link>
-                                    <Link className="btn btn-bordered active smooth-anchor" href="/app/explore"><i
-                                        className="icon-note mr-2"/>Buy NFT</Link>
+                                    <Link className="btn btn-bordered active smooth-anchor" href="/app/aid-organizations"><i
+                                        className="icon-note mr-2"/>Aid Organizations</Link>
                                 </div>
                             </div>
                         </div>

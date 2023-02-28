@@ -299,7 +299,7 @@ transaction(vaultPath: StoragePath) {
 `;
 
 const CUBE_CREATE_CHARITY_SCRIPT = `
-import Charity from 0xc26d1ec60d9fa66b 
+import Charity from 0x529290e4db075ecb 
 import FungibleToken from 0x9a0766d93b6608b7
 
 transaction (name: String, desc: String, eDate: UFix64, targetAmount: UFix64, donatedAddr: Address, nftMetadata: {String:String}) {
@@ -356,7 +356,7 @@ pub fun main(address: Address): [StoragePath] {
   }
 `;
 
-const CUBE_DONATE = ` import Charity from 0xc26d1ec60d9fa66b
+const CUBE_DONATE = ` import Charity from 0x529290e4db075ecb
 import FungibleToken from 0x9a0766d93b6608b7
 import FlowToken from 0x7e60df042a9c0868
 transaction (amount: UFix64, creatorAddr : Address, id: UInt64) {
@@ -831,7 +831,7 @@ pub struct NFTView {
 `
 
 const CUBE_GET_ALL_CHARITY = `
-import Charity from 0xc26d1ec60d9fa66b 
+import Charity from 0x529290e4db075ecb 
 
 pub fun main(): [Charity.CharityDetails]  {
   let allEvents: [Charity.CharityDetails] = []
@@ -847,9 +847,9 @@ pub fun main(): [Charity.CharityDetails]  {
 
 
 const CUBE_GET_DONATERS = `
-import Charity from 0xc26d1ec60d9fa66b
+import Charity from 0x529290e4db075ecb
 
-pub fun main(creatorAddr: Address, id: UInt64): {Address:UFix64}  {
+pub fun main(creatorAddr: Address, id: UInt64): [Charity.DonateBox]  {
     let cap = getAccount(creatorAddr).getCapability<&Charity.CharityEventCollection{Charity.CharityEventCollectionPublic}>
             (Charity.CharityEventCollectionPublicPath).borrow()!
 

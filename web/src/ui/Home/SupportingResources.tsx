@@ -49,12 +49,12 @@ export const SupportingResources = () => {
                     }
                 />
                 <ResourceCard
-                    title="Buy NFT"
+                    title="Aid  Organizations"
                     icon={<CgFileDocument size="2.5rem"/>}
                     body={
                         <>
                             Contribute by purchasing nft from the {" "}
-                            <ChakraLink href="/app/explore" color="purple.100">
+                            <ChakraLink href="/app/aid-organizations" color="purple.100">
                                 Explore
                             </ChakraLink>{" "} page. Help those in need by buying Nft
                         </>

@@ -1,4 +1,4 @@
-import Charity from 0xc26d1ec60d9fa66b
+import Charity from 0x529290e4db075ecb
 
 pub fun main(): [Charity.CharityDetails]  {
   let allEvents: [Charity.CharityDetails] = []

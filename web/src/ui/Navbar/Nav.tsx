@@ -81,7 +81,7 @@ export const Navbar = ({onOpen}) => {
                     title: "New Collection",
                     href: "/",
                     component: (
-                        <Link href="/app/explore" passHref>
+                        <Link href="/app/aid-organizations" passHref>
                             <ChakraLink
                                 fontWeight="bold"
                                 display="flex"
@@ -92,7 +92,7 @@ export const Navbar = ({onOpen}) => {
                                 <ImageIcon
                                     style={{"color": "white", "fontSize": "25px", "marginRight": "5px"}}/>
                                 <Hide below="md">
-                                    <div style={{"color": "white"}}>Explore</div>
+                                    <div style={{"color": "white"}}>Aid Organizations</div>
                                 </Hide>
                             </ChakraLink>
                         </Link>

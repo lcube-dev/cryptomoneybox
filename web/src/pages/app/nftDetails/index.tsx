@@ -77,7 +77,7 @@ const NFTDetailsPage = () => {
 
             await fcl.tx(txId).onceSealed().then(r => {
                 toast.success("Successfully ! ", {id: toastId})
-                router.push("/app/explore")
+                router.push("/app/aid-organizations")
             })
 
         } catch (err) {
