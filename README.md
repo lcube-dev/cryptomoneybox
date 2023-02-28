@@ -73,7 +73,7 @@ The CryptoMoneybox project supports two types of fundraising campaigns:
    * 3000: CryptoMoneybox web app
   
 **Contracts Addresses**
-   * Charity.cdc : [0xd88639d8cf8291b9](https://flowscan.org/account/0xd88639d8cf8291b9)  `Testnet` 
-   * ChainCubeAid.cdc : [0x0d5e5c6c8bd04037](https://flowscan.org/account/0x0d5e5c6c8bd04037)   `Testnet`
+   * Charity.cdc : [0xd88639d8cf8291b9](https://testnet.flowscan.org/account/0xd88639d8cf8291b9)  `Testnet` 
+   * ChainCubeAid.cdc : [0x0d5e5c6c8bd04037](https://testnet.flowscan.org/account/0x0d5e5c6c8bd04037)   `Testnet`
 
 -------------
