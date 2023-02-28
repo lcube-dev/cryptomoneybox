@@ -7,7 +7,6 @@ import * as fcl from "@onflow/fcl"
 import toast from "react-hot-toast"
 import {useFlowUser} from "../../../hooks/userFlowUser";
 import {useRouter} from "next/router";
-import {ModeTable} from "../../../ui/Modal/ShareModel";
 
 
 const initData = {
@@ -73,13 +72,12 @@ const CreateBatchMintAndListPage = () => {
 
     const createBatchNfts = async () => {
         let toastId;
-        try {
 
-            toastId = toast.loading("Checking Account...", {id: toastId})
-            if (flowUser === undefined || !flowUser?.addr) {
-                toast.error("You must login in page!", {id: toastId})
-                router.push("/")
-            }
+        if(flowUser === undefined || flowUser?.addr){
+            toast.error("Cannot create collection! It must be add chain wallet!", {id: toastId})
+            return;
+        }
+        try {
 
             toastId = toast.loading("Creating NFTs...", {id: toastId})
             if (name == "" || name === null) {
@@ -158,7 +156,6 @@ const CreateBatchMintAndListPage = () => {
 
             await fcl.tx(txId).onceSealed().then(r => {
                 toast.success("Successfully Create NFTs", {id: toastId})
-                router.push("/app/explore")
             })
 
         } catch (err) {

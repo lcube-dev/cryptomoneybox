@@ -9,7 +9,7 @@ export const LoginText = () => {
   }
   return (
     <Text mt={{ base: "5" }} textAlign="center">
-      Already have a mintme wallet?{" "}
+      Already have a wallet?{" "}
       <ChakraLink fontWeight="bold" onClick={() => signIn("/app/collection")}>
         Log in
       </ChakraLink>

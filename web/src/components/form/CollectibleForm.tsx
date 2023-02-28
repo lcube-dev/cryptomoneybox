@@ -158,9 +158,12 @@ export const CollectibleForm = (props: FormProps) => {
                       w={{ base: "100%" }}
                       {...field}
                       id="title"
+                      color="black"
                       placeholder="My Title"
                       maxLength={50}
                       ondirty
+                      _hover={{color:"black"}}
+                      _focusVisible={{color:"black"}}
                     />
                   </VStack>
 
@@ -201,6 +204,8 @@ export const CollectibleForm = (props: FormProps) => {
                       id="description"
                       placeholder="Description"
                       maxLength={300}
+                      _hover={{color:"black"}}
+                      _focusVisible={{color:"black"}}
                     />
                   </VStack>
                   <FormErrorMessage fontWeight="semibold">
@@ -263,7 +268,8 @@ export const CollectibleForm = (props: FormProps) => {
                       {...field}
                       id="numEntities"
                     >
-                      <NumberInputField _hover={{color:"black"}} {...field} id="numEntities" rounded="2xl" />
+                      <NumberInputField  _hover={{color:"black"}}
+                                         _focusVisible={{color:"black"}} {...field} id="numEntities" rounded="2xl" />
                     </NumberInput>
                   </VStack>
 

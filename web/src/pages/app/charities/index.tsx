@@ -16,10 +16,7 @@ const CharitiesPage = () => {
     const isMobile = useBreakpointValue({base: true, md: false})
 
     const [NFTs, setNFTs] = useState([]);
-    const [donate, setDonate] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
-    const [isLoadingDonate, setIsLoadingDonate] = useState(false);
-    const [selectedCollection, setSelectedCollection] = useState("Select Collection");
 
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -29,22 +26,21 @@ const CharitiesPage = () => {
             const lastPageIndex = firstPageIndex + PageSize;
             return NFTs.slice(firstPageIndex, lastPageIndex);
         }
-    }, [currentPage, NFTs, selectedCollection]);
+    }, [currentPage, NFTs]);
 
     const {
-        cube_get_all_charity_script,
-        donate_script
+        cube_get_all_charity_script
     } = useContractCadence()
 
     useEffect(() => {
         (async function () {
             setIsLoading(true)
-            if (cube_get_all_charity_script === undefined || flowUser === undefined || !flowUser?.addr) {
+            if (cube_get_all_charity_script === undefined) {
                 return
             }
             await getCharities();
         })()
-    }, [flowUser?.addr, cube_get_all_charity_script])
+    }, [cube_get_all_charity_script])
 
     const getCharities = async () => {
         try {
@@ -52,7 +48,6 @@ const CharitiesPage = () => {
                 cadence: cube_get_all_charity_script,
                 limit: 9999,
             })
-            console.log("charities data " + charities)
 
             const charitiesActive = []
             charities.forEach(element => {
@@ -69,29 +64,6 @@ const CharitiesPage = () => {
             toast.error("An unexpected error was encountered. Try again!")
             console.log(error);
             setIsLoading(false)
-        }
-    }
-
-    const donateFunc = async (id) => {
-        let toastId;
-        try {
-            setIsLoadingDonate(true)
-            const donateTx = await fcl.mutate({
-                cadence: donate_script,
-                args: (arg, t) => [
-                    arg(parseFloat(donate).toFixed(5), t.UFix64),
-                    arg(flowUser?.addr, t.Address),
-                    arg(parseInt(id.toString()), t.UInt64)
-                ],
-                limit: 9999,
-            })
-            await fcl.tx(donateTx).onceSealed()
-            toast.success("Successfully Donate! Thank you", {id: toastId})
-            setIsLoadingDonate(false)
-        } catch (error) {
-            toast.error("An unexpected error was encountered. Try again!", {id: toastId})
-            console.log(error);
-            setIsLoadingDonate(false)
         }
     }
 
@@ -168,13 +140,13 @@ const CharitiesPage = () => {
                                                                                     <h4 className="m-0" style={{
                                                                                         fontWeight: "800",
                                                                                         fontSize: "25px"
-                                                                                    }}>{item.name.length > 25 ? item.name.substr(0,25) +"..." : item.name}</h4>
+                                                                                    }}>{item.name.length > 25 ? item.name.substr(0, 25) + "..." : item.name}</h4>
                                                                                 </div>
                                                                                 <div className="row mt-3">
                                                                                     <h6 className="m-0" style={{
                                                                                         fontWeight: "100",
                                                                                         fontSize: "14px"
-                                                                                    }}>{item.desc.length > 40 ? item.desc.substr(0,40) +"..." : item.desc}</h6>
+                                                                                    }}>{item.desc.length > 40 ? item.desc.substr(0, 40) + "..." : item.desc}</h6>
                                                                                 </div>
                                                                             </div>
                                                                         </div>

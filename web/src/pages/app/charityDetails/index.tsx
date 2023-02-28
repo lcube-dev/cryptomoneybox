@@ -7,11 +7,6 @@ import {useFlowUser} from "../../../hooks/userFlowUser";
 import toast from "react-hot-toast";
 import {useRouter} from "next/router";
 
-const initData = {
-    sub_heading: "Exclusive",
-    heading: "Ongoing IGOs",
-    btn: "View Leaderboard",
-}
 
 const CharityDetailsPage = () => {
     const flowUser = useFlowUser()
@@ -30,11 +25,8 @@ const CharityDetailsPage = () => {
     useEffect(() => {
         (async function () {
             setIsLoading(true)
-            if (flowUser === undefined || !flowUser?.addr || query?.item === "") {
-                return
-            }
             if (query?.item === "") {
-                await router.push("/app/charities")
+                return
             }
             const data = query?.item
             if (typeof data === "string") {
@@ -42,7 +34,7 @@ const CharityDetailsPage = () => {
             }
             setIsLoading(false)
         })()
-    }, [query, flowUser?.addr])
+    }, [query])
 
 
     const donateFunc = async (id, addr) => {
@@ -70,6 +62,8 @@ const CharityDetailsPage = () => {
             setIsLoadingDonate(false)
         }
     }
+
+
     return (
         <>
             <AppLayout title="Charity Detail | Crypto Moneybox">
@@ -96,7 +90,7 @@ const CharityDetailsPage = () => {
                                 <section className="blog-area">
                                     <div className="container">
                                         <div className="row items justify-content-center align-content-center">
-                                            <Spinner size="xl"/>
+                                            <Spinner size="xl" color="white"/>
                                         </div>
                                     </div>
                                 </section>
@@ -121,35 +115,42 @@ const CharityDetailsPage = () => {
                                                     color: "white"
                                                 }}>{nftDetails?.desc}</p>
                                                 <div className="item widget-share-this mt-lg-5">
-                                                    <div className="row">
-                                                        <div className="col-md-6">
-                                                            <input type="number"
-                                                                   id="short-description"
-                                                                   onChange={(e) => setDonate(e.target.value)}
-                                                                   style={{
-                                                                       padding: "7px",
-                                                                       color: "white",
-                                                                       borderRadius: "15px",
-                                                                       marginBottom: isMobile ? "10px" : "0"
-                                                                   }}
-                                                                   placeholder="Donate"/>
-                                                        </div>
-                                                        <div className="col-md-6 pl-0">
-                                                            {
-                                                                isLoadingDonate ?
-                                                                    <Spinner size="lg" color="white"/>
-                                                                    :
-                                                                    <Link
-                                                                        className="btn btn-bordered active smooth-anchor center "
-                                                                        css={{
-                                                                            width: isMobile ? "100%" : "200px",
-                                                                            marginLeft: isMobile ? "15px" : "0"
-                                                                        }}
-                                                                        onClick={() => donateFunc(nftDetails?.id, nftDetails?.creatorAddr)}> Donate</Link>
-                                                            }
+                                                    {
+                                                        flowUser === undefined && flowUser?.addr
+                                                        &&
+                                                        <div className="row">
+                                                            <div className="col-md-6">
+                                                                <input type="number"
+                                                                       id="short-description"
+                                                                       onChange={(e) => setDonate(e.target.value)}
+                                                                       style={{
+                                                                           padding: "7px",
+                                                                           color: "white",
+                                                                           borderRadius: "15px",
+                                                                           marginBottom: isMobile ? "10px" : "0"
+                                                                       }}
+                                                                       placeholder="Donate"/>
+                                                            </div>
+                                                            <div className="col-md-6 pl-0">
+                                                                {
+                                                                    isLoadingDonate ?
+                                                                        <Spinner size="lg" color="white"/>
+                                                                        :
+                                                                        <Link
+                                                                            className="btn btn-bordered active smooth-anchor center "
+                                                                            css={{
+                                                                                width: isMobile ? "100%" : "200px",
+                                                                                marginLeft: isMobile ? "15px" : "0"
+                                                                            }}
+                                                                            onClick={() => donateFunc(nftDetails?.id, nftDetails?.creatorAddr)}>
+                                                                            Donate
+                                                                        </Link>
+                                                                }
 
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    }
+
                                                     {
                                                         txs.length > 0 && txs.map((a, i) =>
                                                             <div className="row">
@@ -161,9 +162,9 @@ const CharityDetailsPage = () => {
                                                                             margin: isMobile ? "15px" : "15px"
                                                                         }}
                                                                         onClick={() => {
-                                                                                const url = "https://testnet.flowscan.org/transaction/" + a
-                                                                                window.open(url)
-                                                                            }
+                                                                            const url = "https://testnet.flowscan.org/transaction/" + a
+                                                                            window.open(url)
+                                                                        }
                                                                         }>
                                                                         Show Donate Transaction {i + 1}
                                                                     </a>
@@ -195,7 +196,8 @@ const CharityDetailsPage = () => {
                                                     <ul className="list-group list-group-flush mt-2">
                                                         <li className="list-group-item d-flex justify-content-between align-items-center">
                                                             <div
-                                                                style={{color: "white"}}>{parseFloat(nftDetails?.targetAmount).toFixed(1)} FLOW</div>
+                                                                style={{color: "white"}}>{parseFloat(nftDetails?.targetAmount).toFixed(1)} FLOW
+                                                            </div>
                                                         </li>
                                                     </ul>
                                                 </div>

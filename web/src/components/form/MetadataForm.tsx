@@ -90,6 +90,7 @@ export const MetadataForm = (props: {
                       margin="0.5"
                       size="sm"
                       _hover={{color:"black"}}
+                      _focusVisible={{color:"black"}}
                       borderRadius="lg"
 
                       //isRequired
@@ -116,6 +117,8 @@ export const MetadataForm = (props: {
                       borderRadius="lg"
                       margin="0.5"
                       size="sm"
+                      _hover={{color:"black"}}
+                      _focusVisible={{color:"black"}}
                     />
                     <FormErrorMessage>{`form.errors.metadata.${index}.val`}</FormErrorMessage>
                   </FormControl>

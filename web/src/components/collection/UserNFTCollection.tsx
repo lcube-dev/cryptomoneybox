@@ -35,6 +35,7 @@ export const UserNFTCollection = () => {
         (async function () {
             setIsLoadings(true)
             if (cube_get_nfts_view_by_address_script === undefined || flowUser === undefined || !flowUser?.addr) {
+                setIsLoadings(false)
                 return
             }
             await getNFT();
@@ -149,7 +150,7 @@ export const UserNFTCollection = () => {
     return (
         <>
             <Heading fontWeight="bold" fontSize="2xl" paddingTop="50px" paddingRight="30px" marginLeft="40px">
-                Niftory NFTS
+                Niftory NFTs
             </Heading>
             <Masonry
                 breakpointCols={{
@@ -175,13 +176,7 @@ export const UserNFTCollection = () => {
             </Masonry>
 
             {
-                isLoadings
-                    ?
-                    <Center w="full">
-                        <Spinner size="xl" color="white"/>
-                    </Center>
-                    :
-                    <>
+                NFTs.length > 0 &&
                         <section className="explore-area prev-project-area ">
                             <div className="container ml-5" style={{width: "75%"}}>
                                 <Heading fontWeight="bold" fontSize="2xl">
@@ -227,7 +222,6 @@ export const UserNFTCollection = () => {
 
                             </div>
                         </section>
-                    </>
             }
 
 

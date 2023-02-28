@@ -122,26 +122,6 @@ export const Navbar = ({onOpen}) => {
                     title: "New Collection",
                     href: "/",
                     component: (
-                        <Link href="/app/contact" passHref>
-                            <ChakraLink
-                                fontWeight="bold"
-                                display="flex"
-                                alignItems="center"
-                                gap="0.3rem"
-                                variant="custom"
-                            >
-                                <ContactIcon size={20} color="white"/>
-                                <Hide below="md">
-                                    <div style={{"color": "white"}}>Contact</div>
-                                </Hide>
-                            </ChakraLink>
-                        </Link>
-                    ),
-                },
-                {
-                    title: "New Collection",
-                    href: "/",
-                    component: (
                         <Link href="/app/collection" passHref>
                             <ChakraLink
                                 fontWeight="bold"
@@ -192,6 +172,26 @@ export const Navbar = ({onOpen}) => {
                                 <UserIcon color="white" size={20}/>
                                 <Hide below="md">
                                     <div style={{color: "white"}}>Account</div>
+                                </Hide>
+                            </ChakraLink>
+                        </Link>
+                    ),
+                },
+                {
+                    title: "Contact",
+                    href: "/",
+                    component: (
+                        <Link href="/app/contact" passHref>
+                            <ChakraLink
+                                fontWeight="bold"
+                                display="flex"
+                                alignItems="center"
+                                gap="0.3rem"
+                                variant="custom"
+                            >
+                                <ContactIcon size={20} color="white"/>
+                                <Hide below="md">
+                                    <div style={{"color": "white"}}>Contact</div>
                                 </Hide>
                             </ChakraLink>
                         </Link>
