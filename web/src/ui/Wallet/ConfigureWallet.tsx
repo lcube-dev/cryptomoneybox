@@ -56,9 +56,6 @@ export function ConfigureWallet({wallet, onReady}: Props) {
             {
                 !isSetupChainCube &&
                 <>
-                    <Button px="4" py="2" size="sm" onClick={() => configure} color="black">
-                        Configure Niftory
-                    </Button>
                     {
                         isLoading
                             ? <Spinner size='lg'/>
