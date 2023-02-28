@@ -1,4 +1,4 @@
-import Charity from 0xd88639d8cf8291b9
+import Charity from 0xc26d1ec60d9fa66b
 import FungibleToken from 0x9a0766d93b6608b7
 import FlowToken from 0x7e60df042a9c0868
 transaction (amount: UFix64, creatorAddr : Address, id: UInt64) {

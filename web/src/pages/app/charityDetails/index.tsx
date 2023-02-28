@@ -17,10 +17,11 @@ const CharityDetailsPage = () => {
     const [txs, setTxs] = useState([]);
     const [nftDetails, setNftDetails] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
+    const [doneters, setDonaters] = useState([]);
 
     const [donate, setDonate] = useState(null);
     const [isLoadingDonate, setIsLoadingDonate] = useState(false);
-    const {donate_script} = useContractCadence()
+    const {donate_script,cube_get_donaters} = useContractCadence()
 
     useEffect(() => {
         (async function () {
@@ -31,6 +32,7 @@ const CharityDetailsPage = () => {
             const data = query?.item
             if (typeof data === "string") {
                 setNftDetails(JSON.parse(data).data)
+                await getDonaters(JSON.parse(data).data.creatorAddr, JSON.parse(data).data.id)
             }
             setIsLoading(false)
         })()
@@ -60,6 +62,26 @@ const CharityDetailsPage = () => {
         } catch (error) {
             toast.error("An unexpected error was encountered. Try again!", {id: toastId})
             setIsLoadingDonate(false)
+        }
+    }
+
+
+    const getDonaters = async (id, creatorAddr) => {
+        let toastId;
+        try {
+            const donaters = await fcl.query({
+                cadence: cube_get_donaters,
+                args: (arg, t) => [
+                    arg(creatorAddr, t.Address),
+                    arg(parseInt(id.toString()), t.UInt64)
+                ],
+                limit: 9999,
+            })
+
+            setDonaters(donaters)
+        } catch (error) {
+            toast.error("An unexpected error was encountered. Try again!", {id: toastId})
+            console.log(error);
         }
     }
 

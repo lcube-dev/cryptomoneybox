@@ -1,5 +1,5 @@
 import { Box, Center, Flex, Heading, VStack } from "@chakra-ui/react"
-import { SupportingResources, Showcase } from "ui/Home"
+import { SupportingResources } from "ui/Home"
 
 import AppLayout from "../../../components/AppLayout"
 import { CollectibleCreateForm } from "../../../components/form/CollectibleCreateForm"
@@ -18,7 +18,7 @@ const NewItemPage = () => {
                 maxW="600"
                 fontSize={{ base: "3xl", md: "5xl" }}
               >
-                New Item
+                New Item with Niftory API
               </Heading>
             </Center>
             <Flex
@@ -32,7 +32,6 @@ const NewItemPage = () => {
             </Flex>
           </Center>
           <SupportingResources />
-          <Showcase />
         </VStack>
       </AppLayout>
     </>

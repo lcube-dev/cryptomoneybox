@@ -139,7 +139,7 @@ export const Navbar = ({onOpen}) => {
                     ),
                 },
                 {
-                    title: "New Item",
+                    title: "New Item ",
                     href: "/app/new-item",
                     component: (
                         <Link href="/app/new-item" passHref>

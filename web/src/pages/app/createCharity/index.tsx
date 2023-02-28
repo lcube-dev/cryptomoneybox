@@ -34,10 +34,6 @@ const CreateChartyPage = () => {
 
     const createCharity = async () => {
         let toastId;
-        if(flowUser === undefined || flowUser?.addr){
-            toast.error("Cannot create collection! It must be add chain wallet!", {id: toastId})
-            return;
-        }
         try {
 
             toastId = toast.loading("Creating Charity...")

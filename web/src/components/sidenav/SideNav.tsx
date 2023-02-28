@@ -13,12 +13,6 @@ export const SideNav = (props: BoxProps & { onChange?: () => void }) => {
         label="My NFTs"
         onChange={props.onChange}
       />
-      <SideNavItem
-        isActive={router.pathname == "/app/collection/created"}
-        href="/app/collection/created"
-        label="Create NFT"
-        onChange={props.onChange}
-      />
         <SideNavItem
             isActive={router.pathname == "/app/createChainCubeCollection"}
             href="/app/createChainCubeCollection"

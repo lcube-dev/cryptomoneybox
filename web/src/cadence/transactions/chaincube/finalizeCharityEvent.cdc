@@ -1,4 +1,4 @@
-import Charity from 0xd88639d8cf8291b9
+import Charity from 0xc26d1ec60d9fa66b
 
 transaction (id: UInt64) {
 

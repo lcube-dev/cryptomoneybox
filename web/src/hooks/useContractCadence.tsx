@@ -213,7 +213,7 @@ import ChainCubeAid from 0x0d5e5c6c8bd04037
 
 // This script returns an array of all the NFT IDs in an account's collection.
 pub fun main(address: Address): Bool {
-    let account = getAccount(address)
+    let account = getAccount(address) 
 
     let collectionRef = account.getCapability(ChainCubeAid.CollectionPublicPath)!.borrow<&{NonFungibleToken.CollectionPublic}>()
         ?? panic("Could not borrow capability from public collection")
@@ -264,7 +264,10 @@ import NFTStorefrontV2 from 0x2d55b98eb200daef
 
 transaction(vaultPath: StoragePath) {
 
-  prepare(acct: AuthAccount) {    
+  prepare(acct: AuthAccount) {  
+         acct.unlink(ChainCubeAid.CollectionPublicPath)      
+         acct.unlink(MetadataViews.getRoyaltyReceiverPublicPath())
+    
        if acct.borrow<&ChainCubeAid.Collection>(from: ChainCubeAid.CollectionStoragePath) == nil {
          let collection <- ChainCubeAid.createEmptyCollection()
          acct.save(<-collection, to: ChainCubeAid.CollectionStoragePath)
@@ -353,7 +356,7 @@ pub fun main(address: Address): [StoragePath] {
   }
 `;
 
-const CUBE_DONATE = ` import Charity from 0xc26d1ec60d9fa66b 
+const CUBE_DONATE = ` import Charity from 0xc26d1ec60d9fa66b
 import FungibleToken from 0x9a0766d93b6608b7
 import FlowToken from 0x7e60df042a9c0868
 transaction (amount: UFix64, creatorAddr : Address, id: UInt64) {
@@ -842,6 +845,19 @@ pub fun main(): [Charity.CharityDetails]  {
 
 `
 
+
+const CUBE_GET_DONATERS = `
+import Charity from 0xc26d1ec60d9fa66b
+
+pub fun main(creatorAddr: Address, id: UInt64): {Address:UFix64}  {
+    let cap = getAccount(creatorAddr).getCapability<&Charity.CharityEventCollection{Charity.CharityEventCollectionPublic}>
+            (Charity.CharityEventCollectionPublicPath).borrow()!
+
+    return cap.getDonators(id: id)
+}
+
+`
+
 function prepareCadence(script: string, contractName: string, address: string) {
     return script.replaceAll("{contractName}", contractName).replaceAll("{contractAddress}", address)
 }
@@ -866,12 +882,14 @@ export function useContractCadence() {
     let cube_purchase_nft_script: string
     let cube_get_nfts_view_by_address_script: string
     let cube_get_all_charity_script: string
+    let cube_get_donaters: string
     let donate_script: string
     if (contract && !fetching) {
         const {name, address} = contract
 
         transferToken_script = prepareCadence(TRANSFER_TOKEN, name, address)
 
+        cube_get_donaters = prepareCadence(CUBE_GET_DONATERS, name, address)
         donate_script = prepareCadence(CUBE_DONATE, name, address)
         craete_set_script = prepareCadence(CREATE_SET_SCRIPT, name, address)
         craete_batch_and_sell_script = prepareCadence(CREATE_BATCH_AND_SELL_SCRIPT, name, address)
@@ -894,6 +912,7 @@ export function useContractCadence() {
     }
 
     return {
+        cube_get_donaters,
         donate_script,
         cube_get_all_charity_script,
         cube_get_nfts_view_by_address_script,
