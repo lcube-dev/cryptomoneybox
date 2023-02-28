@@ -1,4 +1,4 @@
- # ![WhatsApp Image 2023-02-26 at 23 33 32](https://user-images.githubusercontent.com/126346134/221435741-22de6e5c-932b-4356-8c06-6aa901bdce34.jpg)  CryptoMoneybox
+ # <img src="https://user-images.githubusercontent.com/35562979/221948291-dccc65cb-7117-491e-95bd-8271dcda7bde.png" width="75" height="75">  CryptoMoneybox
 
 👋 Welcome! This demo app is designed for fundraising on Flow.
 
