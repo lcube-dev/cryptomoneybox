@@ -27,11 +27,6 @@ const CreateChainCubeCollectionPage = () => {
 
     const createCollection = async () => {
         let toastId;
-        if(flowUser === undefined || flowUser?.addr){
-            toast.error("Cannot create collection! It must be add chain wallet!", {id: toastId})
-            return;
-        }
-
         try {
             toastId = toast.loading("Creating Collection...")
             if (collectionName == "" || collectionName === null) {
@@ -57,7 +52,6 @@ const CreateChainCubeCollectionPage = () => {
                 limit: 9999,
             })
 
-            console.log("txId " + txId)
 
             await fcl.tx(txId).onceSealed().then(r => toast.success("Successfully Create Collection", {id: toastId}))
 

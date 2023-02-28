@@ -28,7 +28,6 @@ const CreateChartyPage = () => {
     } = useContractCadence()
 
     const handleEndDate = (date) => {
-        console.log("EDATE: " + new Date(date).getTime() / 1000)
         setStartDate(date)
         setEDate((new Date(date).getTime() / 1000).toFixed(1))
     }
@@ -79,7 +78,6 @@ const CreateChartyPage = () => {
                 },
             ];
 
-            console.log("eDate eDate " + eDate)
 
             const txId = await fcl.mutate({
                 cadence: cube_create_charity_script,
@@ -94,12 +92,10 @@ const CreateChartyPage = () => {
                 limit: 9999,
             })
 
-            console.log("txId " + txId)
 
-            await fcl.tx(txId).onceSealed().catch(err => console.log(err))
+            await fcl.tx(txId).onceSealed().catch(err =>  toast.error("Error "+err))
             toast.success("Successfully Create Charity Campaign", {id: toastId})
         } catch (err) {
-            console.log(err)
             toast.error("cannot create charity campaign " + err, {id: toastId})
         }
     }

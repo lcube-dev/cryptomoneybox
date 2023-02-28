@@ -39,6 +39,7 @@ const CharityDetailsPage = () => {
 
     const donateFunc = async (id, addr) => {
         let toastId;
+
         try {
             setIsLoadingDonate(true)
             const donateTx = await fcl.mutate({
@@ -58,7 +59,6 @@ const CharityDetailsPage = () => {
             setIsLoadingDonate(false)
         } catch (error) {
             toast.error("An unexpected error was encountered. Try again!", {id: toastId})
-            console.log(error);
             setIsLoadingDonate(false)
         }
     }
@@ -115,41 +115,37 @@ const CharityDetailsPage = () => {
                                                     color: "white"
                                                 }}>{nftDetails?.desc}</p>
                                                 <div className="item widget-share-this mt-lg-5">
-                                                    {
-                                                        flowUser === undefined && flowUser?.addr
-                                                        &&
-                                                        <div className="row">
-                                                            <div className="col-md-6">
-                                                                <input type="number"
-                                                                       id="short-description"
-                                                                       onChange={(e) => setDonate(e.target.value)}
-                                                                       style={{
-                                                                           padding: "7px",
-                                                                           color: "white",
-                                                                           borderRadius: "15px",
-                                                                           marginBottom: isMobile ? "10px" : "0"
-                                                                       }}
-                                                                       placeholder="Donate"/>
-                                                            </div>
-                                                            <div className="col-md-6 pl-0">
-                                                                {
-                                                                    isLoadingDonate ?
-                                                                        <Spinner size="lg" color="white"/>
-                                                                        :
-                                                                        <Link
-                                                                            className="btn btn-bordered active smooth-anchor center "
-                                                                            css={{
-                                                                                width: isMobile ? "100%" : "200px",
-                                                                                marginLeft: isMobile ? "15px" : "0"
-                                                                            }}
-                                                                            onClick={() => donateFunc(nftDetails?.id, nftDetails?.creatorAddr)}>
-                                                                            Donate
-                                                                        </Link>
-                                                                }
-
-                                                            </div>
+                                                    <div className="row">
+                                                        <div className="col-md-6">
+                                                            <input type="number"
+                                                                   id="short-description"
+                                                                   onChange={(e) => setDonate(e.target.value)}
+                                                                   style={{
+                                                                       padding: "7px",
+                                                                       color: "white",
+                                                                       borderRadius: "15px",
+                                                                       marginBottom: isMobile ? "10px" : "0"
+                                                                   }}
+                                                                   placeholder="Donate"/>
                                                         </div>
-                                                    }
+                                                        <div className="col-md-6 pl-0">
+                                                            {
+                                                                isLoadingDonate ?
+                                                                    <Spinner size="lg" color="white"/>
+                                                                    :
+                                                                    <Link
+                                                                        className="btn btn-bordered active smooth-anchor center "
+                                                                        css={{
+                                                                            width: isMobile ? "100%" : "200px",
+                                                                            marginLeft: isMobile ? "15px" : "0"
+                                                                        }}
+                                                                        onClick={() => donateFunc(nftDetails?.id, nftDetails?.creatorAddr)}>
+                                                                        Donate
+                                                                    </Link>
+                                                            }
+
+                                                        </div>
+                                                    </div>
 
                                                     {
                                                         txs.length > 0 && txs.map((a, i) =>

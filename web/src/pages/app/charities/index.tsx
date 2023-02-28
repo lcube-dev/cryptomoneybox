@@ -55,14 +55,12 @@ const CharitiesPage = () => {
                 if (parseFloat(element.eDate) > currentSecond && parseFloat(element.totalDonationAmount) < parseFloat(element.targetAmount)) {
                     charitiesActive.push(element)
                 }
-                console.log("element " + element);
             });
 
             setNFTs(charitiesActive)
             setIsLoading(false)
         } catch (error) {
             toast.error("An unexpected error was encountered. Try again!")
-            console.log(error);
             setIsLoading(false)
         }
     }

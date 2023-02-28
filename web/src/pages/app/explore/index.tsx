@@ -76,14 +76,12 @@ const ExplorePage = () => {
                         value: element.identifier.replace("ChainCubeAidSet_", "")
                     })
                 }
-                console.log(" " + element.identifier);
             });
             setCollections(options)
             setIsLoading(false)
             return collections;
         } catch (error) {
             toast.error("An unexpected error was encountered. Try again!")
-            console.log(error);
             setIsLoading(false)
         }
     }
@@ -99,7 +97,6 @@ const ExplorePage = () => {
                 limit: 9999,
             })
 
-            console.log("address " + address.creatorAddress)
 
             const listings = await fcl.query({
                 cadence: cube_get_nft_listing_nfts_view_script,
@@ -110,13 +107,11 @@ const ExplorePage = () => {
                 limit: 9999,
             })
 
-            console.log("listings " + listings)
 
             setIsLoading(false)
             setNFTs(listings);
         } catch (error) {
             toast.error("An unexpected error was encountered. Try again!")
-            console.log(error);
             setIsLoading(false)
         }
     }

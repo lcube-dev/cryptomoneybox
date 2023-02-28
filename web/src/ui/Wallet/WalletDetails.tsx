@@ -28,7 +28,7 @@ export interface WalletDetailsProps {
 }
 
 export const WalletDetails = (props: WalletDetailsProps) => {
-  const { walletAddress, walletStatus, walletItems, walletOwnerEmail, isLoading = false } = props
+  const { walletAddress, walletStatus, walletOwnerEmail, isLoading = false } = props
   const router = useRouter()
   const disclosure = useDisclosure()
   const { nfts } = useGraphQLQuery<UserNftsQuery, UserNftsQueryVariables>({

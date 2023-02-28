@@ -67,7 +67,7 @@ export function useFlowAccountConfiguration(): FlowAccountConfiguration {
             await fcl.tx(txId).onceSealed()
             return true;
         } catch (err) {
-            console.log("Error chain cube for setup user " + err)
+            // console.log("Error chain cube for setup user " + err)
         }
     }, [cube_configureAccount_transaction])
 

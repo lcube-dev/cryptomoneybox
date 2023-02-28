@@ -38,7 +38,6 @@ const CreateBatchMintAndListPage = () => {
                 return
             }
             const collections = await getCollections();
-            console.log("collections " + collections)
         })()
     }, [flowUser?.addr, cube_get_collections_script])
 
@@ -60,23 +59,17 @@ const CreateBatchMintAndListPage = () => {
                         value: element.identifier.replace("ChainCubeAidSet_", "")
                     })
                 }
-                console.log(" " + element.identifier);
             });
             setCollections(options)
 
             return collections;
         } catch (error) {
-            console.log(error);
+            toast.error("Error "+error)
         }
     }
 
     const createBatchNfts = async () => {
         let toastId;
-
-        if(flowUser === undefined || flowUser?.addr){
-            toast.error("Cannot create collection! It must be add chain wallet!", {id: toastId})
-            return;
-        }
         try {
 
             toastId = toast.loading("Creating NFTs...", {id: toastId})
@@ -152,7 +145,6 @@ const CreateBatchMintAndListPage = () => {
                 limit: 9999,
             })
 
-            console.log("txId " + txId)
 
             await fcl.tx(txId).onceSealed().then(r => {
                 toast.success("Successfully Create NFTs", {id: toastId})

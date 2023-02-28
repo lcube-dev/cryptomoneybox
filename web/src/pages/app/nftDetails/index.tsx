@@ -48,12 +48,10 @@ const NFTDetailsPage = () => {
                 limit: 9999,
             })
             setNftDetails(nftDetail)
-            console.log(nftDetail)
             setIsLoading(false)
             return nftDetails;
         } catch (error) {
             toast.error("An unexpected error was encountered. Try again!")
-            console.log(error);
             setIsLoading(false)
         }
     }
@@ -76,7 +74,6 @@ const NFTDetailsPage = () => {
                 limit: 9999,
             })
 
-            console.log("txId " + txId)
 
             await fcl.tx(txId).onceSealed().then(r => {
                 toast.success("Successfully ! ", {id: toastId})

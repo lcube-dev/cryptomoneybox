@@ -8,6 +8,7 @@ import {
     RegisterWalletMutationVariables,
 } from "../../../generated/graphql"
 import {Button} from "@chakra-ui/react"
+import {useAuthContext} from "../../hooks/useAuthContext";
 
 interface Props {
     onRegister?: () => void
@@ -15,18 +16,19 @@ interface Props {
 
 export function RegisterWallet({onRegister}: Props) {
     const flowUser = useFlowUser()
-    const [isLoadings, setIsLoadings] = useState(false);
 
     const {executeMutation: registerWallet} = useGraphQLMutation<RegisterWalletMutation,
         RegisterWalletMutationVariables>(RegisterWalletDocument)
 
     // When the user logs in, register their wallet. This is because we need to register after fcl.login and it doesn't return a promise.
     useEffect(() => {
-        if (flowUser === undefined || flowUser?.addr) {
+        if (flowUser === undefined || !flowUser?.addr) {
             return
         }
-        registerWallet({address: flowUser?.addr}).then(() =>
-            onRegister?.()
+
+        registerWallet({address: flowUser?.addr}).then(() => {
+                onRegister?.()
+            }
         )
     }, [flowUser?.addr, flowUser?.loggedIn])
 
@@ -39,7 +41,7 @@ export function RegisterWallet({onRegister}: Props) {
         <Button px="4" py="2" size="md" onClick={handleRegister}>
 
 
-                  Add your wallet
+            Add your wallet
 
 
         </Button>

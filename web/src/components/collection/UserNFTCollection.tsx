@@ -53,11 +53,9 @@ export const UserNFTCollection = () => {
                 limit: 9999,
             })
             setNFTs(nfts);
-            console.log(nfts)
             setIsLoadings(false)
         } catch (error) {
             toast.error("An unexpected error was encountered. Try again!")
-            console.log(error);
             setIsLoadings(false)
         }
     }
