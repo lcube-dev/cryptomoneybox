@@ -5,6 +5,7 @@
 CryptoMoneybox is a fundraising platform  demo application for social responsibility projects built with NodeJs and [Cadence](https://developers.flow.com/cadence).
 
  ## ✨ Getting Started
+
 -------------
 
 **1. Install Dependencies**
@@ -27,12 +28,13 @@ git clone --depth=1 https://github.com/lcube-dev/cryptomoneybox.git
 npm run dev
 ```
 
-##  Project Overview
+## Project Overview
+
 -------------
 
 ![CryptoMoneybox](https://user-images.githubusercontent.com/126346134/221440383-991392f4-cfdd-44bd-b569-a8c758b5397a.png)
 
-# 🔎 Legend
+## 🔎 Legend
 
 Above is a basic diagram of the parts of this project contained in each folder, and how each part interacts with the others.
 
@@ -43,24 +45,27 @@ Above is a basic diagram of the parts of this project contained in each folder, 
 
 ## What is CryptoMoneybox?
 The CryptoMoneybox project supports two types of fundraising campaigns:
-1. Fundraising Campaign
+1. Charity Campaign
     - Organizing a fundraising campaign with a CharityEvent resource
 3. Aid Organization
     - Aid organizations model is a a platform that allows individuals and organizations to start a campaign quickly in case of any natural disaster.
 
 ## ❓ More Questions?
-  - Chat with the team on the ChainCube [Discord server](https://discord.gg/pxEQq5xQph)
+   - Chat with the team on the ChainCube [Discord server](https://discord.gg/pxEQq5xQph)
 
 ## Troubleshooting 
- **Finding the logs**
-  - You can see what processes have been started, and if they are online using `pm2 list`
-  - You can tail logs for individual processes using `pm2 logs [process name]`. eg., `pm2 logs api` or `pm2 logs web`
-  - You can tail all logs in the same terminal using `pm2 logs`
+
+**Finding the logs**
+   - You can see what processes have been started, and if they are online using `pm2 list`
+   - You can tail logs for individual processes using `pm2 logs [process name]`. eg., `pm2 logs api` or `pm2 logs web`
+   - You can tail all logs in the same terminal using `pm2 logs`
 
 **Unblock ports**
-  * CryptoMoneybox uses the following ports. Make sure they are not in use by another process
-  * 3000: CryptoMoneybox web app
+   * CryptoMoneybox uses the following ports. Make sure they are not in use by another process
+   * 3000: CryptoMoneybox web app
   
 **Contracts Addresses**
-  * Charity.cdc :   `Testnet` 
-  * ChainCubeAid.cdc :    `Testnet`
+   * Charity.cdc :   `Testnet` 
+   * ChainCubeAid.cdc :    `Testnet`
+
+-------------
