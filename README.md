@@ -12,7 +12,6 @@ CryptoMoneybox is a fundraising platform  demo application for social responsibi
 
 - 🛠 This project requires NodeJS v16.x or above. See: [Node installation instructions](https://nodejs.org/en/)
 - 🛠 This project requires flow-cli v0.39.1 or above. See:[Flow CLI installation instructions](https://developers.flow.com/tools/flow-cli)
-- 🛠 This project requires Python v3.6 or above. See: [Python installation instructions](https://www.python.org/downloads/)
 
 **2. Clone the project**
 ```javascript
