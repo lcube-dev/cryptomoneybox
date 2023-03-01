@@ -284,6 +284,14 @@ const CharityDetailsPage = () => {
                                                             </li>
                                                         </ul>
                                                     </div>
+
+                                                    <div className="item widget-share-this">
+                                                        <h4 className="title">Total Donation Amount</h4>
+                                                        <div style={{
+                                                            color: "white",
+                                                            marginTop: "15px"
+                                                        }}>  {nftDetails?.totalDonationAmount} </div>
+                                                    </div>
                                                     <div className="item widget-share-this">
                                                         <h4 className="title">Share</h4>
                                                         <ul className="navbar-nav social share-list mt-2">
@@ -301,20 +309,10 @@ const CharityDetailsPage = () => {
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div className="item widget-share-this">
-                                                        <h4 className="title">Owner</h4>
-                                                        <div style={{
-                                                            color: "white",
-                                                            marginTop: "15px"
-                                                        }}>  {nftDetails?.creatorAddr} </div>
-                                                    </div>
 
                                                 </div>
                                             </div>
                                         </aside>
-
-
-
                                     </div>
 
                                 </>
